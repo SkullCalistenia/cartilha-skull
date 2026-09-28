@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartilha Skull de Calistenia — Felipe Peloggia</title>
+<style>
+:root{--black:#0D0D0D;--purple:#4A1942;--purpleL:#6B2B62;--amber:#D4A017;--gray:#1E1E1E;--grayM:#2C2C2C;--grayT:#888;--grayL:#EBEBEB;--white:#FFF;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--black);color:var(--white);font-family:Arial,sans-serif;min-height:100vh}
+header{background:var(--black);border-bottom:2px solid var(--amber);position:sticky;top:0;z-index:100}
+.hi{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:baseline;gap:8px}
+.ls{font-size:18px;font-weight:900;color:var(--white);letter-spacing:2px}
+.lb{font-size:11px;color:var(--amber);letter-spacing:1px;text-transform:uppercase}
+.auth{font-size:12px;color:var(--grayT);font-style:italic}
+nav{background:var(--grayM);border-bottom:1px solid #333}
+.ni{max-width:1100px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
+.ni::-webkit-scrollbar{display:none}
+.nt{padding:14px 22px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--grayT);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+.nt:hover{color:var(--white)}
+.nt.active{color:var(--amber);border-bottom-color:var(--amber)}
+.hero{background:linear-gradient(135deg,var(--black) 0%,var(--purple) 100%);padding:48px 1rem 40px;text-align:center;border-bottom:1px solid var(--purpleL)}
+.he{font-size:11px;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:12px}
+.ht{font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.1}
+.ht span{color:var(--amber);display:block}
+.hd{margin:12px auto 0;font-size:14px;color:var(--grayT);max-width:500px}
+.hs{display:flex;gap:24px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.sn{font-size:28px;font-weight:900;color:var(--amber)}
+.sl{font-size:11px;color:var(--grayT);text-transform:uppercase;letter-spacing:1px}
+.mods{max-width:1100px;margin:32px auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.mc{background:var(--grayM);border:1px solid #333;border-radius:var(--r);padding:28px 24px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.mc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber)}
+.mc:hover{border-color:var(--amber);transform:translateY(-3px)}
+.mn{font-size:11px;font-weight:700;color:var(--purpleL);letter-spacing:2px;margin-bottom:8px}
+.mt{font-size:24px;font-weight:900;margin-bottom:6px}
+.md{font-size:12px;color:var(--grayT);margin-bottom:16px;line-height:1.5}
+.mc2{font-size:28px;font-weight:900;color:var(--amber)}
+.mc3{font-size:11px;color:var(--grayT)}
+.ma{position:absolute;bottom:20px;right:20px;color:var(--amber);font-size:20px}
+.mhd{max-width:1100px;margin:28px auto 0;padding:0 1rem;display:none}
+.mhd.active{display:block}
+.mtr{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.mnum{background:var(--purple);color:var(--amber);font-size:12px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:1px}
+.mname{font-size:clamp(20px,4vw,30px);font-weight:900}
+.mcnt{font-size:13px;color:var(--grayT)}
+.sb{max-width:1100px;margin:18px auto 0;padding:0 1rem}
+.si{width:100%;background:var(--grayM);border:1px solid #444;border-radius:var(--r);padding:11px 15px;font-size:14px;color:var(--white);outline:none;transition:border-color .2s}
+.si::placeholder{color:var(--grayT)}
+.si:focus{border-color:var(--amber)}
+.grid{max-width:1100px;margin:20px auto 0;padding:0 1rem 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--grayM);border:1px solid #333;border-radius:var(--r);overflow:hidden;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--amber);transform:translateY(-2px)}
+.ch{padding:12px 14px 8px;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.cn{font-size:11px;font-weight:700;color:var(--amber);letter-spacing:1px;flex-shrink:0}
+.ct{font-size:14px;font-weight:700;line-height:1.3;flex:1}
+.cl{font-size:10px;font-weight:700;padding:3px 7px;border-radius:4px;text-transform:uppercase;flex-shrink:0}
+.li{background:#1a3a1a;color:#6fcf6f}
+.in{background:#3a2a00;color:var(--amber)}
+.av{background:#2a1a3a;color:#b06fcf}
+.el{background:#3a0a0a;color:#cf6f6f}
+.vid{position:relative;width:100%;padding-top:56.25%;background:#111}
+.vid iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.info{padding:10px 14px;border-top:1px solid #333}
+.ir{display:flex;gap:6px;margin-bottom:5px;font-size:12px;line-height:1.5}
+.ir:last-child{margin-bottom:0}
+.ik{color:var(--amber);font-weight:700;flex-shrink:0}
+.iv{color:#ccc}
+.tog{width:100%;background:none;border:none;border-top:1px solid #333;padding:9px 14px;display:flex;align-items:center;justify-content:space-between;color:var(--grayT);font-size:12px;cursor:pointer;transition:color .2s}
+.tog:hover{color:var(--white)}
+.tog svg{transition:transform .2s}
+.tog.open svg{transform:rotate(180deg)}
+.det{padding:0 14px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.det.open{max-height:500px;padding:10px 14px}
+.ds{margin-bottom:10px}
+.ds:last-child{margin-bottom:0}
+.dt{font-size:10px;font-weight:700;color:var(--purpleL);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.dl{list-style:none}
+.dl li{font-size:12px;color:#bbb;padding:2px 0 2px 12px;position:relative;line-height:1.5}
+.dl li::before{content:'—';position:absolute;left:0;color:var(--amber)}
+.hv{display:none}.hv.active{display:block}
+.mv{display:none}.mv.active{display:block}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.mods{grid-template-columns:1fr 1fr}.hero{padding:32px 1rem 28px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hi">
+    <div class="logo"><span class="ls">SKULL</span><span class="lb">Cartilha de Calistenia</span></div>
+    <span class="auth">por Felipe Peloggia</span>
+  </div>
+</header>
+<nav>
+  <div class="ni">
+    <div class="nt active" onclick="show('home')">Início</div>
+    <div class="nt" onclick="show('pullup')">I — Pull Ups</div>
+    <div class="nt" onclick="show('pushup')">II — Push Ups</div>
+    <div class="nt" onclick="show('legs')">III — Legs</div>
+    <div class="nt" onclick="show('abs')">IV — Abs</div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div id="v-home" class="hv active">
+  <div class="hero">
+    <div class="he">Material de Formação Técnica</div>
+    <h1 class="ht">Cartilha Skull<span>de Calistenia</span></h1>
+    <p class="hd">Guia técnico completo para profissionais de educação física — técnica, biomecânica, erros e progressões com vídeo de cada exercício.</p>
+    <div class="hs">
+      <div><div class="sn">4</div><div class="sl">Módulos</div></div>
+      <div><div class="sn">112</div><div class="sl">Exercícios</div></div>
+      <div><div class="sn">112</div><div class="sl">Vídeos</div></div>
+    </div>
+  </div>
+  <div class="mods">
+    <div class="mc" onclick="show('pullup')"><div class="mn">MÓDULO I</div><div class="mt">Pull Ups</div><div class="md">Remadas, puxadas em barra, variações e One Arm</div><div class="mc2">22</div><div class="mc3">exercícios</div><div class="ma">→</div></div>
+    <div class="mc" onclick="show('pushup')"><div class="mn">MÓDULO II</div><div class="mt">Push Ups</div><div class="md">Flexões, Dips, paralelas e progressões avançadas</div><div class="mc2">26</div><div class="mc3">exercícios</div><div class="ma">→</div></div>
+    <div class="mc" onclick="show('legs')"><div class="mn">MÓDULO III</div><div class="mt">Legs</div><div class="md">Agachamentos, pliométrico, unilateral e Pistol</div><div class="mc2">26</div><div class="mc3">exercícios</div><div class="ma">→</div></div>
+    <div class="mc" onclick="show('abs')"><div class="mn">MÓDULO IV</div><div class="mt">Abs</div><div class="md">Core isométrico, dinâmico, barra e avançados</div><div class="mc2">38</div><div class="mc3">exercícios</div><div class="ma">→</div></div>
+  </div>
+</div>
+
+<!-- PULL UP -->
+<div id="v-pullup" class="mv">
+  <div class="mhd active"><div class="mtr"><span class="mnum">MÓDULO I</span><span class="mname">Pull Ups</span></div><div class="mcnt">22 exercícios</div></div>
+  <div class="sb"><input class="si" type="text" placeholder="Buscar exercício..." oninput="filter(this,'g-pullup')"></div>
+  <div class="grid" id="g-pullup"></div>
+</div>
+
+<!-- PUSH UP -->
+<div id="v-pushup" class="mv">
+  <div class="mhd active"><div class="mtr"><span class="mnum">MÓDULO II</span><span class="mname">Push Ups</span></div><div class="mcnt">26 exercícios</div></div>
+  <div class="sb"><input class="si" type="text" placeholder="Buscar exercício..." oninput="filter(this,'g-pushup')"></div>
+  <div class="grid" id="g-pushup"></div>
+</div>
+
+<!-- LEGS -->
+<div id="v-legs" class="mv">
+  <div class="mhd active"><div class="mtr"><span class="mnum">MÓDULO III</span><span class="mname">Legs</span></div><div class="mcnt">26 exercícios</div></div>
+  <div class="sb"><input class="si" type="text" placeholder="Buscar exercício..." oninput="filter(this,'g-legs')"></div>
+  <div class="grid" id="g-legs"></div>
+</div>
+
+<!-- ABS -->
+<div id="v-abs" class="mv">
+  <div class="mhd active"><div class="mtr"><span class="mnum">MÓDULO IV</span><span class="mname">Abs</span></div><div class="mcnt">38 exercícios</div></div>
+  <div class="sb"><input class="si" type="text" placeholder="Buscar exercício..." oninput="filter(this,'g-abs')"></div>
+  <div class="grid" id="g-abs"></div>
+</div>
+
+<script>
+// ── VIDEO MAP (nome exato do arquivo → embed URL) ─────────────────────────
+const VIDEO = {
+    pullup: {
+    "Wide PullUp": "https://drive.google.com/file/d/1MXCD8ZJXv8oL8timia2h4GSZzXUnulhh/preview",
+    "Wide ChinUp": "https://drive.google.com/file/d/1M25y49_jkjijYmhYkdW0S53wlAhLBqKt/preview",
+    "Wide Challenge": "https://drive.google.com/file/d/122NbFYRiFeSd5Wx0sZso-LKTsy2LLe_7/preview",
+    "Shoulder PullUp": "https://drive.google.com/file/d/1N0_jSKl4q47tli9t5AYf0FQFnbB_Dgvc/preview",
+    "Short ChinUp": "https://drive.google.com/file/d/18s9CCp8QQNZdg4mDBIkWsY4GJqktsBjf/preview",
+    "Scapular PullUp": "https://drive.google.com/file/d/1RCehC5NOXhoO6qUJEz8aYa5QlYFXRogk/preview",
+    "Regular PullUp": "https://drive.google.com/file/d/1HoSL-nXTzKUgMruGhP2zeVqkYKMIuYuu/preview",
+    "Regular ChinUp": "https://drive.google.com/file/d/1eLBwn3CvxxE_xYuJ15QrNTx-7ft_xo1C/preview",
+    "Pronade to Supinated": "https://drive.google.com/file/d/1w96czGgThSzq3bpUT5LIuU5sQFuEgkki/preview",
+    "Head Bangers": "https://drive.google.com/file/d/1IqPb_2MX4Lt4RDCP4vv12POsvHeXeDoc/preview",
+    "Explosive Regular PullUp": "https://drive.google.com/file/d/1QWqex7DFzk0sRQZlPWLQ2_jLHCzx-4Ze/preview",
+    "Comando PullUp": "https://drive.google.com/file/d/1yQhUp0C8Pb-aOO-EmlajVDI7d_qbpWr_/preview",
+    "Close PullUp": "https://drive.google.com/file/d/14m2qfB0aZ-NyLHnxlpqyKip_QOI1r9DE/preview",
+    "Close ChinUp": "https://drive.google.com/file/d/1bwg3iRZ1eW_rkPN1QzkLVvW0HMbB_LiG/preview",
+    "Changing Grip": "https://drive.google.com/file/d/1O6pGxmY3V5__UdIGhbTbGDzKLLTYwkZH/preview",
+    "Australian Wide ChinUp": "https://drive.google.com/file/d/1op28qoLvJWH1oxHcpRaWHU0Z9p-JnNOp/preview",
+    "Australian Wide": "https://drive.google.com/file/d/1H3dDPSMgxKYOPMPjinN6JSQ2oaJPZ0_d/preview",
+    "Australian Regular ChinUp": "https://drive.google.com/file/d/12tzMM-tM9bXsdP-0psicktBLhFoM05X6/preview",
+    "Australian Regular": "https://drive.google.com/file/d/1xxe5Mw2yiAfTUV3flo6EIY4MNHlFUJ_S/preview",
+    "Australian Close ChinUp": "https://drive.google.com/file/d/1myskFt20unb9zZLXWAooPbkOx8CziPSy/preview",
+    "Australian Close": "https://drive.google.com/file/d/16rwL6j1G1LqN-r0eAEcLkbI_CLR21eBL/preview",
+    "Archer PullUp": "https://drive.google.com/file/d/10ahVnczvcJ4KKO3dK-6-eXwnq_g1_mUl/preview"
+  },
+      pushup: {
+    "Ball PushuP": "https://drive.google.com/file/d/1waBdHSwsdVBxkMBWrGYuqj7vYasrHJcc/preview",
+    "Chameleon PushUp": "https://drive.google.com/file/d/1LVumFcYEul2X5V3UHyYFmZ-ZtN5mGp7p/preview",
+    "Decline Military PushUp": "https://drive.google.com/file/d/1dNynC33-bWHYCVD_8kWlu_cbPjAPXM_F/preview",
+    "Decline Regular PushUp": "https://drive.google.com/file/d/1_T37pQljMGLXgrkNF2SSCrePvs-9wvQ8/preview",
+    "Decline Wide PushUp": "https://drive.google.com/file/d/1szrhsAOPgdDgRV4VjRTXiK6ChgDpRK0j/preview",
+    "Dips": "https://drive.google.com/file/d/1RcsLeKWsEJtqNDdBZakgFUpXPcOoTq8e/preview",
+    "HandStand PushUp": "https://drive.google.com/file/d/1icvNDMBCChFrtdCbIZwQbl7bUujtl8zb/preview",
+    "Incline Military PushUp": "https://drive.google.com/file/d/11qxcZ_7JbA2OBjtgVj3NmNlOKz7ineAH/preview",
+    "Incline Regular PushUp": "https://drive.google.com/file/d/1dBswvGM5BV5gGtz7q46r9FTjxWafb3wK/preview",
+    "Military PushUp": "https://drive.google.com/file/d/1Xhy_QsYtb4evSXwTbOHVwotABT5vOEn2/preview",
+    "One Army PushUp": "https://drive.google.com/file/d/1uXUU8IWJqg1H_xN3XWGjHuykHG0NtgqD/preview",
+    "Pike PushUp": "https://drive.google.com/file/d/1HiXHuu2h6H7vmMRmT-xT0YviI6PLD5Yu/preview",
+    "Pseudo Planche": "https://drive.google.com/file/d/1qOvQmFmSa9-dmNQR_EI8mmhIwEEiEhSx/preview",
+    "Regular Explosive PushUp": "https://drive.google.com/file/d/11OYrHgEYdOsf5a5pV41pnV1HZeYhcPzI/preview",
+    "Regular PushUp": "https://drive.google.com/file/d/16GWYitceXvO7HodMISRUaNgp3owXoET2/preview",
+    "Russian PushUp": "https://drive.google.com/file/d/1amy6gxWxFO7XQD2CTii1U48pFVk9__eJ/preview",
+    "Shoulder PushUp": "https://drive.google.com/file/d/15aXdoSKieFgkB5cvYnwxzyZwd7tWmQdg/preview",
+    "Skull Crusher": "https://drive.google.com/file/d/1zGvj0STg0n1ls-QZ0iNhcOONK93maGt-/preview",
+    "Steggered PushUp": "https://drive.google.com/file/d/1bO0pNrp85T8rUES3C9ZOHZl8ym-M2E88/preview",
+    "Straight Dips": "https://drive.google.com/file/d/1TC2IR9olB1i-Yc7Dd0rjoC0D3vu7iE79/preview",
+    "Triceps Box": "https://drive.google.com/file/d/1iB4YLHeJVQeR4_JFVUaRaWRcGj4YYe6Z/preview",
+    "Triceps Floor PushUp": "https://drive.google.com/file/d/12ttog3UF7iRQCZjPoPZA7L163wWn8pw8/preview",
+    "Typewriter PushUp": "https://drive.google.com/file/d/1DT2WZnVKzbSvFwZyw2ENjsYKa5DapjPt/preview",
+    "Wide Incline PushUp": "https://drive.google.com/file/d/16AIyY85UHKtv1pTPnkXZG5p_vOOBTZWX/preview",
+    "Wide PushUp": "https://drive.google.com/file/d/138z7B-a48hS1bEn3GX_kVyzFGd6nCU5W/preview",
+    "Wide to Close Explosive PushUp": "https://drive.google.com/file/d/1FhvHFVwLtj7ZtnWuKAdcdjqG8z8mEB6p/preview"
+  },
+    legs: {
+    "Anchor Squat": "https://drive.google.com/file/d/19x8ugqVNCzi2SeZ4lQ7XlIZtP7NV0qzN/preview",
+    "Bopx One Lef Go Down": "https://drive.google.com/file/d/1DlPex8oCFOz-JI9b1eZBKkIslhU7Dn48/preview",
+    "Box One Leg Go Up": "https://drive.google.com/file/d/1kctsm33HFsIPWxcpO7akJjx7eihqaQF0/preview",
+    "Box Side Squat": "https://drive.google.com/file/d/1mfvg93C3sdNy47d30kTbzs1rmdQn3Fku/preview",
+    "Bridge Ball": "https://drive.google.com/file/d/17akvyjyfwr3BXFfC4XEAWbH51JQh7eV9/preview",
+    "Bridge Box": "https://drive.google.com/file/d/1wuq5UEBKO6dad2Sn_MXedkzzi-i-UVxw/preview",
+    "Bulgarian": "https://drive.google.com/file/d/1OJCafUL9FUopwAhYX5LhzY7FUv9XTAY7/preview",
+    "Crab Walk": "https://drive.google.com/file/d/1-wcARk61t-uuWRcb14xQmox9m8LRT6Cn/preview",
+    "Drag Squat": "https://drive.google.com/file/d/1W-dScha70r3dmPcYiuDKb5cLDNN_AELi/preview",
+    "Duck Walk": "https://drive.google.com/file/d/1J8die7gPJa8TmDjdzUhZY-uLCy4T_AFk/preview",
+    "Kettlebell Swing": "https://drive.google.com/file/d/1Nr4wpOklUFo2MoCeWqcZ1q3Pvg-7rGJj/preview",
+    "Long n' Short": "https://drive.google.com/file/d/1r263sOaUOdMK_XLeX06_g-AQ_QTJl53W/preview",
+    "Lunge + Sumo Squat": "https://drive.google.com/file/d/1K6c-_cClaarSFOcxUJy5BTZ9PHXBCAaQ/preview",
+    "Lunge Squat": "https://drive.google.com/file/d/1ybS6CI7do4TIUqdLptv1e7EqfMeogaCj/preview",
+    "Lunge Walk": "https://drive.google.com/file/d/1UIjsVKO44TFvq_iZ0KVraIAYPo5l4ebt/preview",
+    "Nordic Curl": "https://drive.google.com/file/d/1F_rf11Q2Ek8krqcknibTq3rsFmpecfht/preview",
+    "Pliometric Jumping": "https://drive.google.com/file/d/1k5nX6b18gC4UHa1dtPVAvXnW3SZRtvp1/preview",
+    "Pelvic Lift": "https://drive.google.com/file/d/1PiSnGhRvpyGGxUluWkdatOAcg0nvfjWG/preview",
+    "Sumo": "https://drive.google.com/file/d/1mqqwD49rI-slPa4UbKjReA35a3k5r857/preview",
+    "Squat": "https://drive.google.com/file/d/1emOHNQHutg1EDINkLegUubHO8bftmdON/preview",
+    "Sissy": "https://drive.google.com/file/d/1Tkcd7RQaqRCsVh0IrPZEI5LTnC-Oucxv/preview",
+    "Russian Kicks": "https://drive.google.com/file/d/1mfvg93C3sdNy47d30kTbzs1rmdQn3Fku/preview",
+    "Sumo Typewriter": "https://drive.google.com/file/d/1pMJWerpYoBL91ry_IxID38D1Kc-DMJMR/preview",
+    "Wall Sit": "https://drive.google.com/file/d/185bzDS7sKmBRqz141APNhbYfnRP57abp/preview",
+    "Wall Sit + Abductor Super Band": "https://drive.google.com/file/d/1mlzjB2p7qVWIlKIY7MRVPOceKsjJHZ3n/preview",
+    "Wall Sit + Adductor FlexRings": "https://drive.google.com/file/d/1LrujJzYAUPRJohWkratVUO8ke0Yiol_O/preview"
+  },
+      abs: {
+    "Chair": "https://drive.google.com/file/d/17m2To-KtYsdHLCapFPSu_Dvw170yxfed/preview",
+    "Chair Side to Side": "https://drive.google.com/file/d/1eldgySsZssF1355mPGWPlaFy9VktRKZc/preview",
+    "Criss Cross": "https://drive.google.com/file/d/1soo8mfPHH0ayUVXxd0exY7j4nZAVYbTO/preview",
+    "Crucifix": "https://drive.google.com/file/d/1Z7VwEsabcxj7xPRmNYWQh4j-ktCHknuy/preview",
+    "Elbow to Knee": "https://drive.google.com/file/d/1yodmQUMSoJQIOPwf5hB9p4mp2X6ezGeg/preview",
+    "Flutter Kicks": "https://drive.google.com/file/d/1zE_qrSxRU70c7t5Eh-nVp9ISNrysjLNm/preview",
+    "Flutter Kicks Adapted": "https://drive.google.com/file/d/13NhPQzwW-ZtE6_3cnoCgrKXXo2RbzFYJ/preview",
+    "Full Flutter Kicks": "https://drive.google.com/file/d/1XmeYJO4SjQjR02cNN3VhsFZMqHkOg5jy/preview",
+    "Heels Touch": "https://drive.google.com/file/d/1c1iDsYgkxX0JUZbG6J1jVaEtSRpIlPbo/preview",
+    "Hollow Body Rock": "https://drive.google.com/file/d/1AqBeiwB4tn6hCxZZgVH-LG1ZdrQEECVB/preview",
+    "Hundred": "https://drive.google.com/file/d/1SyiapCQe11laBASM2y09rKB2vxnUv5P7/preview",
+    "Isometric Side Plank": "https://drive.google.com/file/d/1sS3ZQH3-mMg3ETECV6DA_KvQlw0k3kKK/preview",
+    "Knee Raises Bar": "https://drive.google.com/file/d/1mKQHRP9PLIsaaKxszI-xfdsxeLzY9cLg/preview",
+    "Knee to Chest Floor": "https://drive.google.com/file/d/1E_lAUW1s6cSb6EOdUweWG2XC1MChI4jn/preview",
+    "L-sit Hold": "https://drive.google.com/file/d/1LDWH_TcukiK5N5bTI4Xtu8KZTmC9rNX1/preview",
+    "Long Kicks": "https://drive.google.com/file/d/18VEiWGguoQJSPW0ivPUBh28DE2O6d-ST/preview",
+    "Long Kicks Adapted": "https://drive.google.com/file/d/1vC_bfuaRTVhQt5l1Jb-LR7cWWjCgg_9H/preview",
+    "Oblique Bar": "https://drive.google.com/file/d/1xz5ezGKl2qCkNJjzsKBNChQf_v2rOu-d/preview",
+    "Oblique Floor": "https://drive.google.com/file/d/1e84TkUPewmeoBIeJccYZUQ685jQrkDLo/preview",
+    "Parachutist": "https://drive.google.com/file/d/1oHKGDcaxNlXu_jVmBk_PDmTdUgV_A7uW/preview",
+    "Parachutist Twist": "https://drive.google.com/file/d/1CqVAQLW_sd5sP5NOZwrvQnqRa7WIl-XO/preview",
+    "Pendulum": "https://drive.google.com/file/d/14XzEqfiLL6AXui_cDOqcd74y3sUjtwul/preview",
+    "Plank Knee to Elbow": "https://drive.google.com/file/d/146KoUpKgZsDlhqkvzyU9bGqN2mMZq-g3/preview",
+    "Plank Up'n Down": "https://drive.google.com/file/d/1Twr9hwM5HQytPSKL3xBQmLLGmzPhf3Gh/preview",
+    "Russian Row": "https://drive.google.com/file/d/1brsyU0uqkMaKz9v2PgDq3mCSqJ1kk9F7/preview",
+    "Russian Twist": "https://drive.google.com/file/d/1--miT-jtaztrtzvB10xVq_rbYcRdXC_B/preview",
+    "Scissors Floor": "https://drive.google.com/file/d/19WUvCx_FvzeI6EnE4R_EkEkRKVSOiJYy/preview",
+    "Scissors Floor Adapted": "https://drive.google.com/file/d/1RFhfFPmoYYswp-yEcYi4hBeCnsOBXB-O/preview",
+    "Short Kicks": "https://drive.google.com/file/d/1LgASK2VtqVBGhMgSTqZiNnUI1X9RAimj/preview",
+    "Short Kicks Adapted": "https://drive.google.com/file/d/1rQGACM37wg8llbFXlRIUrdKUqNvNTukN/preview",
+    "Short Kicks Bar": "https://drive.google.com/file/d/1dctK74cT7X0fTV4Il8dAAUBYTepVXV8l/preview",
+    "Side Plank Up'n Down": "https://drive.google.com/file/d/1_M3Vj7ZG2QrxUI_yhI4KIAPx33DhGDEC/preview",
+    "Side Plank Up'n Down Adapted": "https://drive.google.com/file/d/1glUza6-bVNknQv1_6YbH9UbffYCjn0Dx/preview",
+    "Star Crunch": "https://drive.google.com/file/d/1-FgDzr6o2jgCu22R77avPQHKrsFDUlKI/preview",
+    "Toes to Bar": "https://drive.google.com/file/d/14Fseb1uz3kE_AhMuujXlDT2JbvbvKSfc/preview",
+    "Toes to Bar Side to Side": "https://drive.google.com/file/d/13FFcis6rHFtFnWfO758YQYlGTKbO8lOu/preview",
+    "V-Up Explosive": "https://drive.google.com/file/d/1Egk8VBRRvJiiM3qG_se_TbABYviSgwdb/preview",
+    "Windshield": "https://drive.google.com/file/d/1f31jNPELNCes20y0k5JTlFXPWXQ9YrT-/preview"
+  }
+};
+
+// ── EXERCISE DATA ─────────────────────────────────────────────────────────
+const DATA = {
+    pullup: [
+    {n:"Wide PullUp",l:"av",m:"Dorsal externo (65%), Romboides (25%), Bíceps (10%)",p:"Regular PullUp 8 reps com qualidade",d:"Puxada com abertura máxima de mãos. Desenvolve a largura de costas — recruta as fibras externas do dorsal e os romboides de forma mais intensa que qualquer outra variação."},
+    {n:"Wide ChinUp",l:"av",m:"Dorsal externo (55%), Bíceps (30%), Romboides (15%)",p:"Chin Up + Wide PullUp com qualidade",d:"Versão supinada da puxada aberta. Combina o maior recrutamento de bíceps da supinação com o trabalho de dorsal externo da abertura — variação de alta exigência para ombro."},
+    {n:"Wide Challenge",l:"av",m:"Dorsal (unilateral 70%), Romboides (20%), Core anti-rotacional (10%)",p:"Wide PullUp com 10 reps",d:"Desafio de puxada lateral com transferência de carga para um lado. Prepara o sistema nervoso para o padrão de puxada assimétrica antes do Archer."},
+    {n:"Shoulder PullUp",l:"li",m:"Trapézio inferior (50%), Serrátil anterior (30%), Romboides (20%)",p:"Capacidade de ficar pendurado 15s",d:"Depressão escapular ativa pendurado na barra sem flexionar os cotovelos. Isola o trapézio inferior — músculo mais negligenciado e mais importante para a qualidade de qualquer puxada."},
+    {n:"Short ChinUp",l:"in",m:"Bíceps (50%), Dorsal inferior (35%), Braquial (15%)",p:"Chin Up com 12 reps e qualidade técnica",d:"Chin Up restrito à metade superior da amplitude (de 90° ao topo). O aluno fica na zona de maior tensão — tempo sob tensão elevado sem a fase de descanso da extensão completa."},
+    {n:"Scapular PullUp",l:"li",m:"Trapézio inferior (55%), Serrátil anterior (30%), Romboides (15%)",p:"Capacidade de ficar pendurado 15s",d:"Mesmo movimento do Shoulder PullUp com pegada pronada. O exercício de consciência escapular mais importante do módulo — sem ele, qualquer puxada vira trabalho de trapézio superior."},
+    {n:"Regular PullUp",l:"in",m:"Dorsal largo (55%), Bíceps (25%), Romboides e trapézio médio (20%)",p:"Australian Regular Pronada 10 reps + suporte na barra",d:"Puxada pronada padrão — a base de todo o módulo. A pegada pronada posiciona o bíceps em desvantagem mecânica, forçando o dorsal a ser o motor principal do movimento."},
+    {n:"Regular ChinUp",l:"li",m:"Dorsal largo (45%), Bíceps braquial (40%), Romboides (15%)",p:"Australian Supinado 10 reps",d:"Puxada supinada — mais acessível que a pronada por colocar o bíceps em vantagem mecânica. É a porta de entrada para o trabalho em suspensão total no método Skull."},
+    {n:"Pronade to Supinated",l:"in",m:"Dorsal largo (50%), Bíceps (30%), Romboides (20%)",p:"Regular PullUp + Chin Up com qualidade",d:"Troca de pegada de pronada para supinada durante a execução. Trabalha os dois padrões e o sistema nervoso aprende a diferença de recrutamento entre as pegadas."},
+    {n:"Head Bangers",l:"av",m:"Dorsal largo (50%), Bíceps (30%), Romboides (20%)",p:"Regular PullUp 10 reps com força explosiva",d:"No topo da puxada, mover o corpo para frente e para trás como um pêndulo. Desenvolve controle isométrico na posição de máxima contração do dorsal."},
+    {n:"Explosive Regular PullUp",l:"av",m:"Dorsal largo (55%), Bíceps (30%), Romboides (15%)",p:"Regular PullUp 12 reps com qualidade",d:"Puxada com fase concêntrica explosiva — o objetivo é tirar as mãos da barra no topo. Desenvolve potência de dorsal e bíceps essencial para o Muscle Up."},
+    {n:"Comando PullUp",l:"in",m:"Dorsal largo (50%), Bíceps (30%), Romboides (20%)",p:"Chin Up 8 reps com qualidade",d:"Pegada neutra com corpo levemente inclinado para trás e cotovelos apontando para baixo e para frente. Recruta a porção inferior do dorsal e o grande redondo — padrão funcional de escalada e combate."},
+    {n:"Close PullUp",l:"in",m:"Dorsal interno (50%), Bíceps (30%), Romboides (20%)",p:"Regular PullUp 8 reps",d:"Puxada com mãos próximas e cotovelos colados ao tronco. Enquanto a Wide desenvolve largura, a Close desenvolve espessura e profundidade de costas."},
+    {n:"Close ChinUp",l:"in",m:"Dorsal interno (40%), Bíceps (45%), Romboides (15%)",p:"Chin Up 10 reps",d:"Chin Up com pegada próxima — máxima vantagem mecânica do bíceps. A variação mais acessível em suspensão total e frequentemente usada como exercício finalizador de série."},
+    {n:"Changing Grip",l:"li",m:"Dorsal largo (45%), Romboides (30%), Trapézio médio e inferior (25%)",p:"Capacidade de ficar pendurado 20s com ativação escapular",d:"Pendurado com escápulas ativas, alternar entre pegada pronada e supinada mantendo a tensão constante. O exercício de consciência de ativação mais importante de todo o módulo."},
+    {n:"Australian Wide ChinUp",l:"li",m:"Dorsal externo (45%), Bíceps (35%), Romboides (20%)",p:"Australian Regular Supinado com 10 reps",d:"Remada invertida com abertura de mãos e pegada supinada. Combina o trabalho de dorsal externo da abertura com a vantagem mecânica do bíceps — mais exigente que a Regular Supinada."},
+    {n:"Australian Wide",l:"li",m:"Dorsal externo (50%), Romboides (30%), Bíceps (20%)",p:"Australian Regular Pronada 10 reps",d:"Remada invertida com mãos abertas além dos ombros. Desenvolve dorsal externo e romboides de forma segura antes de expor o ombro à carga total da Wide em suspensão."},
+    {n:"Australian Regular ChinUp",l:"li",m:"Dorsal largo (40%), Bíceps (40%), Romboides (20%)",p:"Australian Regular Pronada 10 reps",d:"Remada invertida supinada na largura dos ombros. Regressão direta do Chin Up — o aluno que não consegue Chin Up em suspensão começa aqui e progride pelo ângulo."},
+    {n:"Australian Regular",l:"li",m:"Dorsal largo (45%), Romboides e trapézio médio (35%), Bíceps (20%)",p:"Nenhum — ponto de entrada para qualquer aluno",d:"Remada invertida pronada — o exercício mais democrático do módulo. Todo aluno começa aqui independente do nível e é também a regressão universal de qualquer puxada."},
+    {n:"Australian Close ChinUp",l:"li",m:"Dorsal interno (40%), Bíceps (45%), Romboides (15%)",p:"Australian Regular Supinado 10 reps",d:"Remada invertida supinada fechada. Menor stress articular de todo o módulo — frequentemente prescrita para alunos com histórico de ombro sensível ou em reabilitação."},
+    {n:"Australian Close",l:"li",m:"Dorsal interno (45%), Bíceps (35%), Romboides (20%)",p:"Australian Regular Pronada 10 reps",d:"Remada invertida pronada fechada. Automatiza o padrão de cotovelo fechado em horizontal antes de aumentar a carga para a suspensão vertical."},
+    {n:"Archer PullUp",l:"av",m:"Dorsal largo 70% (braço dobrado), Bíceps (20%), Romboides (10%)",p:"Wide PullUp 10 reps + Side to Side com qualidade",d:"O penúltimo degrau antes do One Arm. A carga efetiva no braço em puxada chega a 75-85% do peso corporal — o sistema nervoso aprende o padrão unilateral com segurança do braço estendido como apoio."}
+  ],
+      pushup: [
+    {n:"Ball PushuP",l:"av",m:"Peitoral (50%), Tríceps (25%), Core — instabilidade constante (25%)",p:"Regular PushUp com domínio + estabilidade de core",d:"Flexão com mãos sobre a bola. A instabilidade ativa o transverso abdominal e os estabilizadores de ombro em intensidade que a superfície firme não consegue — alto estímulo com baixa carga."},
+    {n:"Chameleon PushUp",l:"av",m:"Peitoral (45%), Tríceps (25%), Oblíquos e Core rotacional (30%)",p:"Regular Twist + Staggered com qualidade",d:"Flexão com múltiplas variações de posição integradas em sequência. Desenvolve adaptabilidade motora e recrutamento em diferentes ângulos — exige coordenação e consciência corporal avançadas."},
+    {n:"Decline Military PushUp",l:"in",m:"Tríceps braquial (45%), Peitoral superior (35%), Deltoide anterior (20%)",p:"Military PushUp horizontal + Regular Decline",d:"Cotovelos fechados com pés elevados — a combinação mais exigente para o tríceps em cadeia fechada. Equivalente ao Skull Crusher em barra mas com o peso corporal."},
+    {n:"Decline Regular PushUp",l:"li",m:"Peitoral superior (65%), Deltoide anterior (20%), Tríceps (15%)",p:"Flexão Regular horizontal com qualidade",d:"Pés elevados em superfície — desloca o centro de massa para cima e recruta o peitoral superior (porção clavicular). É o primeiro passo para preparar o aluno para o Handstand PushUp."},
+    {n:"Decline Wide PushUp",l:"in",m:"Peitoral superior externo (70%), Deltoide anterior (20%), Tríceps (10%)",p:"Wide PushUp horizontal + Regular Decline",d:"A variação de maior tensão no peitoral superior de toda a família de flexões. Exige mobilidade e estabilidade escapular consolidadas — contraindicada para ombros com histórico de impingement."},
+    {n:"Dips",l:"in",m:"Peitoral inferior (50%), Tríceps braquial (35%), Deltoide anterior (15%)",p:"Suporte estático nas paralelas 20s + 15 reps Regular",d:"Dip clássico com tronco inclinado para frente. O elo entre as flexões no solo e os movimentos em suspensão — também é a fase de saída do Muscle Up."},
+    {n:"HandStand PushUp",l:"el",m:"Deltoide anterior (60%), Tríceps (30%), Peitoral superior (10%)",p:"Pike PushUp + pés altos + força de ombro consolidada",d:"O topo do empurrar vertical. O padrão de movimento do HandStand PushUp é o shoulder press com o peso corporal — a progressão mais avançada de ombro da calistenia."},
+    {n:"Incline Military PushUp",l:"li",m:"Tríceps braquial (45%), Peitoral inferior (40%), Deltoide (15%)",p:"Nenhum — regressão universal de tríceps",d:"Military PushUp com mãos elevadas — reduz a carga. Quanto menor a superfície, mais difícil. Progressão linear e mensurável sem equipamento adicional."},
+    {n:"Incline Regular PushUp",l:"li",m:"Peitoral inferior (50%), Tríceps (30%), Deltoide (20%)",p:"Nenhum — entrada para qualquer aluno",d:"Flexão com mãos elevadas — a versão mais acessível. Permite que iniciantes pratiquem o padrão correto antes de ter força suficiente para o plano horizontal."},
+    {n:"Military PushUp",l:"in",m:"Tríceps braquial (40%), Peitoral (50%), Deltoide anterior (10%)",p:"Regular PushUp 15 reps com qualidade",d:"Cotovelos fechados colados ao tronco — padrão de isolamento de tríceps. O mesmo padrão exigido no planche, tornando-o um exercício de preparação para os estáticos."},
+    {n:"One Army PushUp",l:"el",m:"Peitoral 80% (braço em trabalho), Tríceps (12%), Deltoide (8%)",p:"Archer PushUp 10 reps/lado + One Army negativo consolidado",d:"O topo da pirâmide de empurrar. 100% do peso corporal sobre um braço em cadeia fechada com anti-rotação de core máxima. Representa meses de trabalho progressivo consolidado."},
+    {n:"Pike PushUp",l:"in",m:"Deltoide anterior (50%), Tríceps braquial (40%), Peitoral superior (10%)",p:"Regular Decline com pés altos + mobilidade de isquiotibial",d:"Corpo em V invertido com cabeça buscando o chão. A ponte entre as flexões horizontais e os movimentos invertidos — treina o padrão do HandStand PushUp com segurança."},
+    {n:"Pseudo Planche",l:"av",m:"Deltoide anterior (45%), Peitoral (35%), Tríceps (20%)",p:"Military Decline com qualidade + protração escapular ativa",d:"Mãos recuadas ao nível do quadril com corpo inclinado para frente. A porta de entrada para os exercícios estáticos — onde o profissional identifica a maturidade escapular do aluno."},
+    {n:"Regular Explosive PushUp",l:"in",m:"Peitoral (55%), Tríceps (30%), Deltoide (15%)",p:"Regular PushUp 15 reps com qualidade",d:"Flexão com fase concêntrica explosiva. Desenvolve potência de peitoral e tríceps — transferência direta para artes marciais, ginástica e esportes de contato."},
+    {n:"Regular PushUp",l:"li",m:"Peitoral maior (60%), Tríceps braquial (30%), Deltoide anterior (10%)",p:"Nenhum — ponto zero do módulo",d:"A flexão fundamental — base de toda a família. O ponto zero do módulo: nenhuma variação é introduzida antes do domínio técnico completo aqui."},
+    {n:"Russian PushUp",l:"in",m:"Tríceps (40%), Peitoral (30%), Deltoide anterior (15%), Serrátil anterior (15%)",p:"Regular PushUp 15 reps + prancha de antebraço estável",d:"Transição prancha alta/baixa com alternância de braços. O core anti-rotacional é o maior benefício — o aluno treina estabilidade sem perceber que está treinando core."},
+    {n:"Shoulder PushUp",l:"in",m:"Deltoide anterior (55%), Tríceps braquial (35%), Trapézio médio (10%)",p:"Pike PushUp no solo + suporte estático nas paralelas",d:"Nas paralelas com quadril elevado e cotovelos apontando para cima — similar à Pike. A instabilidade das paralelas revela fraquezas escapulares que o solo esconde."},
+    {n:"Skull Crusher",l:"in",m:"Tríceps braquial cabeça longa (70%), cabeça lateral (30%)",p:"Military Decline + força de extensão de tríceps",d:"Extensão de cotovelo na barra com cotovelos apontando para baixo. O exercício mais eficiente para cabeça longa do tríceps em calistenia — o nome não é coincidência."},
+    {n:"Steggered PushUp",l:"in",m:"Peitoral assimétrico (55% braço avançado), Tríceps (30%), Deltoide (15%)",p:"20 reps de Regular PushUp com qualidade técnica",d:"Uma mão avançada, outra recuada — primeira transferência para o unilateral. O core precisa resistir à rotação constantemente. Pré-requisito direto para o One Army PushUp."},
+    {n:"Straight Dips",l:"in",m:"Peitoral anterior/clavicular (55%), Tríceps braquial (35%), Deltoide (10%)",p:"Dips clássico com 12 reps e qualidade",d:"Dip com corpo vertical e peito buscando a barra. Trata-se de exercício independente do Dip clássico — o estímulo em peitoral anterior não é reproduzível por nenhuma outra flexão."},
+    {n:"Triceps Box",l:"li",m:"Tríceps braquial (75%), Deltoide anterior (15%), Peitoral inferior (10%)",p:"Nenhum — primeiro exercício de tríceps em cadeia fechada",d:"Extensão de tríceps no banco — o ponto de entrada de tríceps no método Skull. Qualquer cadeira serve. O aluno aprende depressão escapular e extensão de cotovelo com segurança."},
+    {n:"Triceps Floor PushUp",l:"li",m:"Tríceps braquial cabeça longa (65%), cabeça medial (35%)",p:"Nenhum — regressão universal de tríceps",d:"Extensão de tríceps no chão deitado de costas. O único exercício de tríceps em cadeia fechada sem equipamento no solo — regressão quando qualquer outra opção não está disponível."},
+    {n:"Typewriter PushUp",l:"av",m:"Peitoral lateral (65%), Tríceps (20%), Deltoide (15%)",p:"Archer PushUp + Wide PushUp 15 reps",d:"Deslizamento lateral na posição baixa sem subir entre os lados. Tensão contínua no peitoral sem momento de alívio — um dos exercícios mais impressionantes do método Skull."},
+    {n:"Wide Incline PushUp",l:"li",m:"Peitoral inferior externo (60%), Tríceps (25%), Deltoide (15%)",p:"Nenhum — regressão de Wide PushUp",d:"Wide PushUp com mãos em superfície elevada. Reduz a carga e permite aprender o padrão de abertura antes da versão horizontal. Progressão de ângulo semanal mensurável."},
+    {n:"Wide PushUp",l:"in",m:"Peitoral externo (65%), Romboides (25%), Bíceps (10%)",p:"Regular PushUp 10 reps com qualidade",d:"Mãos abertas além dos ombros com cotovelos a 90°. Maior recrutamento do peitoral externo — responsável pela largura de peito. Mais stress articular no ombro que a Regular."},
+    {n:"Wide to Close Explosive PushUp",l:"av",m:"Peitoral (50%), Adutores de ombro (30%), Tríceps (20%)",p:"Wide PushUp + explosividade consolidada",d:"Salto de flexão trocando de Wide para Close e vice-versa. Desenvolve potência, coordenação e explosividade em mudança de padrão — elemento de alta transferência para esportes."}
+  ],
+    legs: [
+    {n:"Anchor Squat",l:"av",m:"Quadríceps (60%), Glúteo (30%), Core (10%)",p:"Agachamento regular + mobilidade de tornozelo e quadril",d:"Posição ancorada — os pés ficam fixos em um ponto de resistência enquanto o corpo desce em agachamento. Recruta intensamente o quadríceps em posição de desvantagem mecânica."},
+    {n:"Bopx One Lef Go Down",l:"in",m:"Quadríceps (55%), Glúteo (35%), Isquiotibial (10%)",p:"Agachamento regular 15 reps + equilíbrio unilateral",d:"Descida unilateral controlada em direção ao banco — o oposto do Box One Leg Go Up. Desenvolve força excêntrica de quadríceps e controle de joelho."},
+    {n:"Box One Leg Go Up",l:"in",m:"Quadríceps (55%), Glúteo (35%), Isquiotibial (10%)",p:"Agachamento regular + equilíbrio unilateral básico",d:"Subida unilateral sobre o banco empurrando com uma perna. Desenvolve força concêntrica, equilíbrio e ativação de glúteo."},
+    {n:"Box Side Squat",l:"in",m:"Glúteo médio (40%), Adutores (35%), Quadríceps (25%)",p:"Sumo com qualidade + equilíbrio lateral",d:"Agachamento lateral com um pé sobre o banco. Trabalha o plano frontal — glúteo médio e adutores em padrão que o agachamento frontal não acessa."},
+    {n:"Bridge Ball",l:"in",m:"Glúteo máximo (55%), Isquiotibiais (35%), Core (10%)",p:"Bridge regular com qualidade + equilíbrio sobre bola suíça",d:"Elevação pélvica com calcanhares sobre bola suíça. A instabilidade recruta estabilizadores do quadril e core que a superfície firme não exige."},
+    {n:"Bridge Box",l:"in",m:"Glúteo máximo (60%), Isquiotibiais (30%), Core (10%)",p:"HipUp bilateral com 15 reps",d:"Elevação pélvica com pés no banco — maior amplitude de movimento que o HipUp no solo. Maior recrutamento de glúteo na posição elevada."},
+    {n:"Bulgarian",l:"in",m:"Quadríceps (50%), Glúteo (35%), Isquiotibial (15%)",p:"One Leg Box com qualidade + mobilidade de flexor de quadril",d:"Agachamento búlgaro com pé traseiro elevado no banco. Superior ao Lunge em estímulo — praticamente 100% do peso sobre uma perna com déficit de amplitude."},
+    {n:"Crab Walk",l:"li",m:"Glúteo médio (40%), Adutores (30%), Quadríceps (20%), Core (10%)",p:"Sumo com qualidade",d:"Caminhada lateral em posição de agachamento. Mantém tensão constante no glúteo médio — estabilizador mais importante do joelho, frequentemente subdesenvolvido."},
+    {n:"Drag Squat",l:"in",m:"Glúteo médio (35%), Adutores (30%), Quadríceps (20%), Core (15%)",p:"Crab Walk com qualidade + estabilidade lateral",d:"Crab Walk arrastando uma anilha no chão. Adiciona resistência ao movimento lateral sem mudar o padrão — progressão natural do Crab Walk."},
+    {n:"Duck Walk",l:"li",m:"Quadríceps (50%), Glúteo (30%), Panturrilha (20%)",p:"Agachamento regular + mobilidade de joelho e tornozelo",d:"Caminhada em posição de agachamento completo. Isometria dinâmica de quadríceps com alto tempo sob tensão — também desenvolve mobilidade funcional de tornozelo."},
+    {n:"Kettlebell Swing",l:"in",m:"Glúteo (60%), Isquiotibiais (30%), Core (10%)",p:"Stiff + mobilidade de quadril + kettlebell",d:"Balanço de kettlebell com padrão de hip hinge. Desenvolve potência de cadeia posterior e resistência cardiovascular simultaneamente."},
+    {n:"Long n\' Short",l:"in",m:"Quadríceps (50%), Glúteo (30%), Isquiotibiais (20%)",p:"Agachamento 15 reps + isometria a 90° por 20s",d:"10 agachamentos completos + isometria a 90° + 10 parciais na posição baixa. Volume total e tempo sob tensão máxima no mesmo exercício."},
+    {n:"Lunge + Sumo Squat",l:"in",m:"Quadríceps (40%), Glúteo (35%), Adutores (25%)",p:"Lunge e Sumo separados com qualidade",d:"Combinação de avanço e agachamento sumo em sequência. Trabalha padrão sagital (Lunge) e frontal (Sumo) em um único movimento contínuo."},
+    {n:"Lunge Squat",l:"li",m:"Quadríceps (50%), Glúteo (35%), Isquiotibial (15%)",p:"Agachamento regular com qualidade",d:"Avanço clássico. Treina o padrão de caminhada em amplitude aumentada — expõe desequilíbrios entre as pernas que o agachamento bilateral esconde."},
+    {n:"Lunge Walk",l:"in",m:"Quadríceps (50%), Glúteo (35%), Isquiotibial (15%)",p:"Lunge Squat com qualidade",d:"Avanço com deslocamento — caminhada em passadas de Lunge. Adiciona componente dinâmico e de equilíbrio ao Lunge estático."},
+    {n:"Nordic Curl",l:"av",m:"Isquiotibiais (85%), Glúteo (10%), Gastrocnêmio (5%)",p:"Bridge com qualidade + força de isquiotibial consolidada",d:"Flexão nórdica com pés presos. O exercício de maior carga excêntrica para isquiotibiais — reduz em até 70% a incidência de lesões musculares em atletas."},
+    {n:"Pliometric Jumping",l:"in",m:"Quadríceps (45%), Glúteo (35%), Panturrilha (20%)",p:"Agachamento regular 15 reps + joelhos saudáveis",d:"Agachamento com salto vertical. Treina o ciclo de alongamento-encurtamento — potência de membros inferiores fundamental para esportes e artes marciais."},
+    {n:"Pelvic Lift",l:"li",m:"Glúteo máximo (70%), Isquiotibiais (20%), Core (10%)",p:"Nenhum — entrada de glúteo",d:"Elevação pélvica clássica. O ângulo de 90° de joelho na posição elevada é onde o glúteo tem maior braço de alavanca — pico de ativação impossível de atingir no agachamento."},
+    {n:"Sumo",l:"li",m:"Adutores (35%), Quadríceps (35%), Glúteo (30%)",p:"Agachamento regular com qualidade",d:"Agachamento com pés abertos. Recruta adutores e glúteo médio de forma diferente do convencional — complemento essencial para equilíbrio muscular de quadril."},
+    {n:"Squat",l:"li",m:"Quadríceps (50%), Glúteo (30%), Isquiotibiais (20%)",p:"Nenhum — base de todos os agachamentos",d:"Agachamento regular — padrão fundamental do módulo. Antes de qualquer variação, o aluno precisa dominar o agachamento com coluna neutra, joelhos alinhados e calcanhares no chão."},
+    {n:"Sissy",l:"in",m:"Quadríceps (80%), Tibial anterior (15%), Core (5%)",p:"Agachamento 20 reps + mobilidade de tornozelo",d:"Agachamento Sissy com joelho avançando além da ponta do pé. Isolamento máximo de quadríceps em posição de máximo alongamento — contraindicado para alunos com tendinite de joelho ativa."},
+    {n:"Russian Kicks",l:"in",m:"Isquiotibiais (45%), Glúteo (35%), Core anti-rotacional (20%)",p:"Equilíbrio unilateral + mobilidade de isquiotibial",d:"Extensão de quadril unilateral em pé. Recruta glúteo e isquiotibial no padrão funcional de corrida e artes marciais — o core resiste à rotação constantemente."},
+    {n:"Sumo Typewriter",l:"av",m:"Adutores (50%), Quadríceps (30%), Glúteo médio (20%)",p:"Sumo com qualidade + mobilidade de adutores",d:"Deslizamento lateral na posição baixa do Sumo sem subir entre os lados. Tensão contínua nos adutores — o mesmo princípio do Typewriter aplicado ao agachamento lateral."},
+    {n:"Wall Sit",l:"li",m:"Quadríceps (85%), Glúteo (10%), Isquiotibial (5%)",p:"Agachamento regular com qualidade",d:"Isometria de agachamento contra a parede a 90°. Desenvolve resistência específica de quadríceps e capacidade de manter posição — base para trabalho de longa duração."},
+    {n:"Wall Sit + Abductor Super Band",l:"in",m:"Quadríceps (65%), Glúteo médio (25%), Abdutores (10%)",p:"Wall Sit com qualidade + band elástica",d:"Wall Sit com band de resistência nos joelhos. Adiciona trabalho de glúteo médio e abdutores à isometria de quadríceps — altamente eficiente para joelhos com tendência ao valgo."},
+    {n:"Wall Sit + Adductor FlexRings",l:"in",m:"Quadríceps (60%), Adutores (30%), Core (10%)",p:"Wall Sit com qualidade + flexrings",d:"Wall Sit com flexrings entre os joelhos. Adiciona trabalho de adutores à isometria — fortalece o padrão de fechamento de joelho essencial para a corrida e lutas."}
+  ],
+      abs: [
+    {n:"Chair",l:"li",m:"Reto abdominal (45%), Flexores de quadril (40%), Transverso abdominal (15%)",p:"Nenhum — entrada de abdômen",d:"Deitado com pernas a 90° no ar. A posição de cadeira neutraliza os flexores de quadril — o reto abdominal trabalha mais isolado que em qualquer abdominal com pés no chão."},
+    {n:"Chair Side to Side",l:"in",m:"Oblíquos externo e interno (50%), Reto abdominal (30%), Flexores (20%)",p:"Chair com qualidade + rotação básica de tronco",d:"Chair com rotação lateral — pernas fixas a 90° enquanto o tronco gira para tocar o chão a cada lado. O quadril estabilizado pela posição permite isolamento puro de oblíquos."},
+    {n:"Criss Cross",l:"li",m:"Oblíquos (55%), Reto abdominal (30%), Flexores de quadril (15%)",p:"Abdominal básico com qualidade",d:"Abdominal cruzado com rotação diagonal — cotovelo direito ao joelho esquerdo e vice-versa. Recruta os oblíquos em sua função primária de rotação de tronco."},
+    {n:"Crucifix",l:"in",m:"Reto abdominal (40%), Transverso abdominal (35%), Oblíquos (25%)",p:"Prancha isométrica 30s + core básico consolidado",d:"Braços em cruz com pernas elevadas a 45°. A posição aberta dos braços aumenta o braço de alavanca — o transverso precisa trabalhar constantemente para manter a lombar colada."},
+    {n:"Elbow to Knee",l:"li",m:"Oblíquos (45%), Reto abdominal (35%), Flexores de quadril (20%)",p:"Core básico com qualidade",d:"Cotovelo em direção ao joelho oposto em diagonal. Movimento simples e eficiente de rotação cruzada — excelente ponto de entrada para trabalho de oblíquo."},
+    {n:"Flutter Kicks",l:"li",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Quadríceps (15%)",p:"Capacidade de elevar pernas com lombar colada ao chão",d:"Pernas alternadas em pequena amplitude a ~25° do chão. Isometria dinâmica de flexores de quadril com lombar colada — o critério de qualidade mais importante do exercício."},
+    {n:"Flutter Kicks Adapted",l:"li",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Quadríceps (15%)",p:"Flutter Kicks básico com qualidade",d:"Versão adaptada com pernas em ângulo mais alto ou amplitude reduzida. Para alunos que ainda não conseguem manter a lombar colada na versão padrão."},
+    {n:"Full Flutter Kicks",l:"in",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Quadríceps (15%)",p:"Flutter Kicks com pernas baixas + força de flexores consolidada",d:"Flutter Kicks com maior amplitude (30-40cm entre as pernas) em posição mais baixa. A posição baixa das pernas é onde a exigência de reto abdominal inferior é máxima."},
+    {n:"Heels Touch",l:"li",m:"Oblíquos (65%), Reto abdominal (25%), Core lateral (10%)",p:"Nenhum — exercício de entrada de oblíquo",d:"Inclinação lateral deslizando a mão em direção ao calcanhar. O exercício de oblíquo mais acessível e seguro — lombar protegida com pés no chão durante todo o movimento."},
+    {n:"Hollow Body Rock",l:"in",m:"Reto abdominal (40%), Transverso abdominal (35%), Oblíquos (25%)",p:"Hollow body hold por 20s com qualidade",d:"Posição de canoinha com balanços frente e trás. A posição base da ginástica artística — combina o conceito de powerhouse do Pilates com a isometria de ginástica."},
+    {n:"Hundred",l:"in",m:"Reto abdominal (40%), Transverso abdominal (35%), Flexores de quadril (25%)",p:"Core isométrico básico + coordenação respiratória",d:"100 pulsadas de braço com pernas a 45° e escápulas elevadas — 5 pulsadas por inspiração, 5 por expiração. Integração do Pilates ao método Skull para trabalhar respiração e core simultaneamente."},
+    {n:"Isometric Side Plank",l:"li",m:"Oblíquo externo (40%), Oblíquo interno (30%), Glúteo médio (20%), Core (10%)",p:"Prancha frontal 30s com qualidade",d:"Prancha lateral isométrica. Treina os dois estabilizadores laterais mais importantes simultaneamente — oblíquo e glúteo médio. Prevenção de lesão lombar por compressão assimétrica."},
+    {n:"Knee Raises Bar",l:"li",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Oblíquos (15%)",p:"Capacidade de ficar pendurado na barra 15s",d:"Elevação de joelhos na barra. O ponto de entrada do trabalho de core em suspensão — sem apoio para o tronco, o core estabiliza sem auxílio externo."},
+    {n:"Knee to Chest Floor",l:"li",m:"Flexores de quadril (55%), Reto abdominal inferior (35%), Oblíquos (10%)",p:"Core básico com qualidade",d:"Elevação bilateral de joelhos ao peito no solo. Versão mais acessível do Knee Raises — sem a exigência de suspensão, permite que iniciantes desenvolvam a força de flexão de quadril."},
+    {n:"L-sit Hold",l:"av",m:"Flexores de quadril (45%), Reto abdominal (30%), Tríceps e deltoide (25%)",p:"Suporte estático nas paralelas + força de flexores de quadril consolidada",d:"Sustentação em L nas paralelas com pernas paralelas ao chão. Combina força de suporte de ombro, força de flexor de quadril e força abdominal — o parâmetro de avaliação de core mais usado no método Skull."},
+    {n:"Long Kicks",l:"in",m:"Flexores de quadril (50%), Reto abdominal (35%), Quadríceps (15%)",p:"Flutter Kicks com controle e força consolidada",d:"Chutes alternados com amplitude total — pernas passando de uma posição alta para baixa alternadamente. Maior amplitude que o Flutter Kicks, exigindo mais força e controle de flexores."},
+    {n:"Long Kicks Adapted",l:"li",m:"Flexores de quadril (50%), Reto abdominal (35%), Quadríceps (15%)",p:"Flutter Kicks com qualidade básica",d:"Versão adaptada dos Long Kicks com pernas em ângulo mais alto. Para alunos em transição do Flutter para os Long Kicks completos."},
+    {n:"Oblique Bar",l:"av",m:"Oblíquos externo e interno (60%), Reto abdominal (25%), Deltoide e tríceps (15%)",p:"Suporte nas paralelas 20s + L-sit por 5s com qualidade",d:"L-sit nas paralelas com rotação lateral de pernas. O peso das pernas rotacionando em suspensão é o maior braço de alavanca possível para os oblíquos."},
+    {n:"Oblique Floor",l:"in",m:"Oblíquos (55%), Reto abdominal (30%), Flexores de quadril (15%)",p:"Side Plank + controle de rotação de quadril",d:"Trabalho de oblíquo no solo com rotação controlada. Versão acessível do Oblique Bar — mesmos músculos, sem a exigência do suporte em suspensão."},
+    {n:"Parachutist",l:"li",m:"Eretores de coluna (45%), Glúteo máximo (35%), Isquiotibiais (20%)",p:"Nenhum — exercício de lombar acessível",d:"Deitado de bruços, elevar tronco e pernas simultaneamente. Um dos poucos exercícios que ativa eretores, glúteo e isquiotibial juntos em encurtamento — equilíbrio essencial com o trabalho de flexão de abdômen."},
+    {n:"Parachutist Twist",l:"in",m:"Eretores de coluna (40%), Oblíquos (35%), Glúteo (25%)",p:"Parachutist com qualidade + controle de rotação",d:"Parachutist com rotação lateral do tronco no ponto alto. Adiciona trabalho de oblíquo à extensão de cadeia posterior — raramente encontrado em outros exercícios."},
+    {n:"Pendulum",l:"in",m:"Oblíquos (55%), Transverso abdominal (30%), Glúteo médio (15%)",p:"Side Plank 30s + controle de rotação de quadril",d:"Deitado em T, pernas a 90° descendo lateralmente com controle. A descida excêntrica controlada é onde ocorre o maior estímulo — o peso das pernas cria o maior braço de alavanca de oblíquo disponível no solo."},
+    {n:"Plank Knee to Elbow",l:"in",m:"Oblíquos (40%), Core anti-rotacional (35%), Quadríceps (15%), Deltoide (10%)",p:"Prancha alta 30s + coordenação motora básica",d:"Prancha com joelho vindo ao cotovelo do mesmo lado ou cruzado. Integra flexão dinâmica de quadril ao padrão de prancha — muito usado em circuitos de condicionamento."},
+    {n:"Plank Up'n Down",l:"in",m:"Core anti-rotacional (35%), Tríceps (30%), Deltoide (25%), Serrátil anterior (10%)",p:"Prancha alta e baixa 30s cada + força básica de empurrar",d:"Transição prancha alta/baixa alternando braços. No contexto de Abs é o exercício de anti-rotação de core mais prescrito — a assimetria constante desafia o core durante toda a série."},
+    {n:"Russian Row",l:"li",m:"Oblíquos (55%), Reto abdominal (30%), Flexores de quadril (15%)",p:"Core básico + rotação de tronco controlada",d:"Sentado a 45°, girar o tronco tocando as mãos a cada lado. A posição reclinada mantém o reto abdominal em isometria enquanto os oblíquos realizam a rotação."},
+    {n:"Russian Twist",l:"li",m:"Oblíquos (55%), Reto abdominal (30%), Flexores de quadril (15%)",p:"Chair com qualidade",d:"Versão padrão da família Russian. Três variáveis de progressão independentes — ângulo de inclinação, pernas elevadas e carga — permitem adaptar para qualquer nível."},
+    {n:"Scissors Floor",l:"in",m:"Oblíquos (40%), Reto abdominal (35%), Flexores de quadril (25%)",p:"Suporte nas paralelas 20s + core consolidado",d:"Tesoura de pernas no solo — pernas cruzando alternadamente. Versão acessível das Scissors Parallels sem a exigência do suporte em suspensão."},
+    {n:"Scissors Floor Adapted",l:"li",m:"Oblíquos (40%), Reto abdominal (35%), Flexores de quadril (25%)",p:"Scissors Floor básico",d:"Versão adaptada das Scissors com amplitude reduzida. Para alunos em desenvolvimento de mobilidade de quadril e força de oblíquo."},
+    {n:"Short Kicks",l:"li",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Quadríceps (15%)",p:"Capacidade de manter lombar no chão com pernas elevadas",d:"Chutes alternados de amplitude moderada a 45-60°. A versão de aprendizado antes do Flutter Kicks — ritmo controlado que garante que o aluno aprenda a manter a lombar durante o movimento."},
+    {n:"Short Kicks Adapted",l:"li",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Quadríceps (15%)",p:"Short Kicks básico com qualidade",d:"Versão ainda mais acessível com pernas em ângulo mais alto ou amplitude menor. Ponto de partida absoluto para alunos sem experiência prévia de core."},
+    {n:"Short Kicks Bar",l:"in",m:"Flexores de quadril (50%), Reto abdominal inferior (35%), Oblíquos (15%)",p:"Pendurado 20s + core básico consolidado",d:"Short Kicks executados pendurado na barra. Combina o trabalho de flexores de quadril com a exigência de estabilização de core em suspensão — sem apoio externo para o tronco."},
+    {n:"Side Plank Up'n Down",l:"in",m:"Oblíquos (45%), Core lateral (30%), Tríceps (15%), Deltoide (10%)",p:"Side Plank isométrica 30s com qualidade",d:"Prancha lateral dinâmica subindo e descendo o quadril. Adiciona trabalho dinâmico de oblíquo à estabilidade lateral — maior estímulo que a versão isométrica."},
+    {n:"Side Plank Up'n Down Adapted",l:"li",m:"Oblíquos (45%), Core lateral (30%), Tríceps (15%), Deltoide (10%)",p:"Side Plank isométrica básica",d:"Versão adaptada com joelho no chão. Reduz a carga lateral para alunos que ainda não sustentam a versão completa com pé no chão."},
+    {n:"Star Crunch",l:"in",m:"Reto abdominal (50%), Oblíquos (30%), Flexores de quadril (20%)",p:"Crunch básico com qualidade técnica",d:"Deitado em X — cotovelo e joelho opostos ao centro em diagonal. A posição de X aumenta o braço de alavanca e a amplitude de movimento em relação ao crunch convencional."},
+    {n:"Toes to Bar",l:"av",m:"Flexores de quadril (45%), Reto abdominal (40%), Dorsal largo (15%)",p:"Knee Raises com qualidade + força de puxada consolidada",d:"Pés até a barra com pernas estendidas. A fase final recruta o reto abdominal em encurtamento máximo que nenhum crunch consegue alcançar. Exige flexão de quadril além de 90° com pernas estendidas."},
+    {n:"Toes to Bar Side to Side",l:"av",m:"Oblíquos (50%), Reto abdominal (30%), Flexores de quadril (20%)",p:"Toes to Bar com qualidade + força de oblíquo consolidada",d:"Toes to Bar com movimento lateral no topo — limpador de para-brisa. O exercício de maior exigência de oblíquo em barra de todo o módulo."},
+    {n:"V-Up Explosive",l:"av",m:"Reto abdominal (50%), Flexores de quadril (35%), Core geral (15%)",p:"V-sit hold por 5s + core avançado consolidado",d:"Do alongamento completo (deitado) ao V-sit explosivo. O reto abdominal trabalha em amplitude total — do máximo alongamento ao máximo encurtamento em um único movimento."},
+    {n:"Windshield",l:"av",m:"Oblíquos (55%), Core rotacional (30%), Dorsal e bíceps (15%)",p:"Toes to Bar Side to Side com qualidade",d:"Limpador de para-brisa na barra — pernas rotacionando lateralmente em suspensão. O padrão mais próximo de ginástica artística disponível sem equipamento especializado."}
+  ]
+};
+
+// ── RENDER ────────────────────────────────────────────────────────────────
+function levelClass(l){return{li:'li',in:'in',av:'av',el:'el'}[l]||'li'}
+function levelLabel(l){return{li:'Iniciante',in:'Intermediário',av:'Avançado',el:'Elite'}[l]||l}
+
+function card(ex, idx, mod) {
+  const url = VIDEO[mod][ex.n] || '';
+  const uid = 'd'+Math.random().toString(36).substr(2,8);
+  return `<div class="card" data-name="${ex.n.toLowerCase()}">
+    <div class="ch">
+      <span class="cn">${String(idx+1).padStart(2,'0')}</span>
+      <span class="ct">${ex.n}</span>
+      <span class="cl ${levelClass(ex.l)}">${levelLabel(ex.l)}</span>
+    </div>
+    <div class="vid">${url
+      ? `<iframe src="${url}" allow="autoplay" allowfullscreen loading="lazy"></iframe>`
+      : `<div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;font-size:13px">Sem vídeo</div>`
+    }</div>
+    <div class="info">
+      <div class="ir"><span class="ik">Músculos</span><span class="iv">${ex.m}</span></div>
+      <div class="ir"><span class="ik">Pré-req.</span><span class="iv">${ex.p}</span></div>
+      ${ex.d ? `<div class="ir"><span class="ik">Sobre</span><span class="iv">${ex.d}</span></div>` : ''}
+    </div>
+    <button class="tog" onclick="tog('${uid}',this)">
+      Ver detalhes
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="det" id="${uid}"></div>
+  </div>`;
+}
+
+function tog(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+  btn.classList.toggle('open');
+  btn.childNodes[0].textContent = el.classList.contains('open') ? 'Ocultar ' : 'Ver detalhes ';
+}
+
+function filter(inp, gid) {
+  const q = inp.value.toLowerCase();
+  document.querySelectorAll(`#${gid} .card`).forEach(c => {
+    c.style.display = c.dataset.name.includes(q) ? '' : 'none';
+  });
+}
+
+function show(mod) {
+  document.querySelectorAll('.hv,.mv').forEach(v=>v.classList.remove('active'));
+  document.querySelectorAll('.nt').forEach(t=>t.classList.remove('active'));
+  const vm = mod==='home'?document.getElementById('v-home'):document.getElementById('v-'+mod);
+  if(vm) vm.classList.add('active');
+  const tabs=['home','pullup','pushup','legs','abs'];
+  document.querySelectorAll('.nt')[tabs.indexOf(mod)]?.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// Init
+['pullup','pushup','legs','abs'].forEach(mod=>{
+  const g = document.getElementById('g-'+mod);
+  if(g) g.innerHTML = DATA[mod].map((ex,i)=>card(ex,i,mod)).join('');
+});
+</script>
+</body>
+</html>
